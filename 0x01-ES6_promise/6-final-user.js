@@ -6,7 +6,7 @@ import uploadPhoto from './5-photo-reject';
  * @param {string} firstName
  * @param {string} lastName
  * @param {string} fileName
- * @returns {Array}
+ * @returns {Promise<Array<{status: string, value: string}>>}
  */
 export default function handleProfileSignup(firstName, lastName, fileName) {
   const userPromise = signUpUser(firstName, lastName);
@@ -19,3 +19,4 @@ export default function handleProfileSignup(firstName, lastName, fileName) {
     }));
   });
 }
+console.log(handleProfileSignup('Bob', 'Dylan', 'bob_dylan.jpg').then((res) => console.log(res)));
