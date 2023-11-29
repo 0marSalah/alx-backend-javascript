@@ -1,7 +1,7 @@
 /**
- * @param {Promise} chinaDownload 
+ * @param {Promise} chinaDownload
  * @param {Promise} USDownload
- * @returns {Promise} 
+ * @returns {Promise}
  */
 export default function loadBalancer(chinaDownload, USDownload) {
   return Promise.race([chinaDownload, USDownload]);
