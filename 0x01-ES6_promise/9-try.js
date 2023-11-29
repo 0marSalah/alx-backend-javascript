@@ -1,3 +1,7 @@
+/**
+ * @param {Function} mathFunction
+ * @returns {Array}
+*/
 export default function guardrail(mathFunction) {
   const queue = [];
   try {
