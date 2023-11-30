@@ -50,3 +50,6 @@ export const listOfStudents = [
   student4,
   student5
 ];
+
+console.log(listOfStudents)
+console.log(listOfStudents.map((student) => student.fullStudentDescription));
