@@ -1,3 +1,5 @@
 export default class Airport {
-  constructor(name, )
+  constructor(name, code) {
+    
+  }
 }
