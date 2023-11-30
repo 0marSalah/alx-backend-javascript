@@ -1,9 +1,3 @@
-import Currency from "./3-currency";
-
-/**
- * @param {number} amount
- * @param {Currency} currency
-*/
 export default class Pricing {
   constructor(amount, currency) {
     this._amount = amount;
