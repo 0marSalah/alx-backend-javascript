@@ -7,14 +7,8 @@ class SkyHighBuilding extends Building {
   }
   get floors() {
     return this._floors;
-  }
+  }P
   evacuationWarningMessage() {
     return 'Evacuate slowly the NUMBER_OF_FLOORS floors.';
   }
 }
-
-
-const building = new SkyHighBuilding(140, 60);
-console.log(building.sqft);
-console.log(building.floors);
-console.log(building.evacuationWarningMessage());
