@@ -2,7 +2,7 @@ import Currency from "./3-currency";
 
 /**
  * @param {number} amount
- * @param {Currancy} currency
+ * @param {Currency} currency
 */
 export default class Pricing {
   constructor(amount, currency) {
