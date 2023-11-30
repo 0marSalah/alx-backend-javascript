@@ -31,6 +31,3 @@ export default class Pricing {
     return `${this._amount} ${this._currency.name} (${this._currency.code})`;
   }
 }
-const p = new Pricing(100, new Currency('EUR', 'Euro'));
-console.log(p);
-console.log(p.displayFullPrice());
