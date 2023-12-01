@@ -1,14 +1,5 @@
-/**
- * Car class
- * @method constructor
- * @method cloneCar
- * @property {string} _brand
- * @property {string} _motor
- * @property {string} _color
- */
 export default class Car {
   /**
-   * 
    * @param {string} brand 
    * @param {string} motor 
    * @param {string} color 
@@ -23,6 +14,6 @@ export default class Car {
    * @returns {string} - new Car instance
    */
   cloneCar() {
-    return this.constructor(this._brand, this._motor, this._color);
+    return new this.constructor(this._brand, this._motor, this._color);
   }
 }

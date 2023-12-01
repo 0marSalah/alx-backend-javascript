@@ -16,7 +16,7 @@ export class EVCar extends Car {
    * @returns {string} - new Car instance
    */
   cloneCar() {
-    return Car (this._brand, this._motor, this._color);
+    return new Car (this._brand, this._motor, this._color);
   }
 }
 
