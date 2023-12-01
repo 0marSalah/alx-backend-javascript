@@ -23,6 +23,6 @@ export default class Car {
    * @returns {string} - new Car instance
    */
   cloneCar() {
-    return new Car(this._brand, this._motor, this._color);
+    return this.constructor(this._brand, this._motor, this._color);
   }
 }

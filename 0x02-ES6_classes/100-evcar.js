@@ -12,6 +12,12 @@ export class EVCar extends Car {
     this._range = range;
   }
 
+  /**
+   * @returns {string} - new Car instance
+   */
+  cloneCar() {
+    return Car (this._brand, this._motor, this._color);
+  }
 }
 
 const ec1 = new EVCar('Tesla', 'Turbo', 'Red', '250');
