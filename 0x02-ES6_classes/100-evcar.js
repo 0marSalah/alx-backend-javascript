@@ -2,10 +2,10 @@ import Car from './10-car';
 
 export class EVCar extends Car {
   /**
-   * @param {string} brand 
-   * @param {string} motor 
-   * @param {string} color 
-   * @param {number} range 
+   * @param {string} brand
+   * @param {string} motor
+   * @param {string} color
+   * @param {number} range
    */
   constructor(brand, motor, color, range) {
     super(brand, motor, color);
@@ -16,7 +16,7 @@ export class EVCar extends Car {
    * @returns {string} - new Car instance
    */
   cloneCar() {
-    return new Car (this._brand, this._motor, this._color);
+    return new Car(this._brand, this._motor, this._color);
   }
 }
 
