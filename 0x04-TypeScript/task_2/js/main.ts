@@ -70,3 +70,13 @@ const executeWork: IExecuteWork = (employee) => {
     return (employee as Teacher).workTeacherTasks();
   }
 }
+
+type Subjects = "Math" | "History";
+
+const teachClass = (todayClass: Subjects): string => {
+  if (todayClass === "Math") {
+    return "Teaching Math";
+  } else {
+    return "Teaching History";
+  }
+}
