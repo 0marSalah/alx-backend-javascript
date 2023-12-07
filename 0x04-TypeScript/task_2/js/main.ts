@@ -50,3 +50,23 @@ const createEmployee: ICreateEmployee = (salary) => {
     return new Director();
   }
 }
+
+interface IIsDirector {
+  (employee: Teacher | Director): boolean;
+}
+
+const isDirector: IIsDirector = (employee) => {
+  return employee instanceof Director;
+}
+
+interface IExecuteWork {
+  (employee: Teacher | Director): string;
+}
+
+const executeWork: IExecuteWork = (employee) => {
+  if (isDirector(employee)) {
+    return (employee as Director).workDirectorTasks();
+  } else {
+    return (employee as Teacher).workTeacherTasks();
+  }
+}
