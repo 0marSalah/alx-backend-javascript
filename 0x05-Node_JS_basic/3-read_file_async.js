@@ -2,6 +2,10 @@
 
 const fs = require("fs");
 
+/**
+ * Counts the students in a CSV data file.
+ * @param {String} dataPath The path to the CSV data file.
+ */
 const countStudents = async path => {
   try {
     const data = await fs.promises.readFile(path, "utf8");
