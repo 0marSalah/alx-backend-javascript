@@ -15,7 +15,8 @@ class StudentsController {
     readDatabase(dataPath)
       .then(studentGroups => {
         const responseParts = ["This is the list of our students"];
-        const iterables = Object.entries(studentGroups).sort((a, b) => {
+        // A comparison function for ordering the student groups by field.
+        const cmpFxn = (a, b) => {
           if (a[0].toLowerCase() < b[0].toLowerCase()) {
             return -1;
           }
@@ -23,9 +24,19 @@ class StudentsController {
             return 1;
           }
           return 0;
-        });
+        };
 
-        for (const [field, group] of iterables) {
+        for (const [field, group] of Object.entries(studentGroups).sort(
+          (a, b) => {
+          if (a[0].toLowerCase() < b[0].toLowerCase()) {
+            return -1;
+          }
+          if (a[0].toLowerCase() > b[0].toLowerCase()) {
+            return 1;
+          }
+          return 0;
+        }
+        )) {
           responseParts.push(
             [
               `Number of students in ${field}: ${group.length}.`,
